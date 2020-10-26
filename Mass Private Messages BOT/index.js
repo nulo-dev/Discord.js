@@ -1,3 +1,11 @@
+const {Client, RichEmbed} = require('discord.js');
+const Discord = require('discord.js')
+const bot = new Client();
+const superagent = require('superagent')
+const token = 'YOUR TOKEN';
+
+const PREFIX = ',';
+
 bot.on('message', msg => {
     let args = msg.content.substring(PREFIX.length).split(" ");
     switch(args[0]){
