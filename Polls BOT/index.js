@@ -1,3 +1,14 @@
+const { Client, RichEmbed } = require('discord.js');
+const bot = new Client();
+
+const token = "YOUR TOKEN HERE";
+
+const PREFIX = "!";
+
+bot.on('ready', () =>{
+    console.log("El bot esta activo!");
+});
+
 bot.on('message', message  =>{
     let args = message.content.substring(PREFIX.length).split(" ");
 
@@ -25,3 +36,5 @@ bot.on('message', message  =>{
 
     }
 });
+
+bot.login(token);
