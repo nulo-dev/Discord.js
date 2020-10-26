@@ -1,0 +1,27 @@
+bot.on('message', message  =>{
+    let args = message.content.substring(PREFIX.length).split(" ");
+
+    switch(args[0]){
+
+        case "encuesta":
+            const Embed = new RichEmbed()
+            .setColor(0xFFC300)
+            .setTitle("¡Como iniciar una encuesta!")
+            .setDescription("!encuesta para mandar una encuesta simple de sí o no.")
+            .addField("Ejemplo", "!encuesta **¿Osaka RP es el mejor servidor?**")
+            if(!args[1]){
+                message.channel.send(Embed);
+                break;
+            }
+
+            let msgArgs = args.slice(1).join(" ");
+
+            message.channel.send("📋 " + "**" + msgArgs + "**").then(messageReaction => {
+                    messageReaction.react("1⃣");
+                    messageReaction.react("2⃣");
+                message.delete(2000).catch(console.error);
+            });
+        break;
+
+    }
+});
