@@ -6,7 +6,7 @@ const token = "YOUR TOKEN HERE";
 const PREFIX = "!";
 
 bot.on('ready', () =>{
-    console.log("El bot esta activo!");
+    console.log("nul-dev bot is active!");
 });
 
 bot.on('message', message  =>{
@@ -14,12 +14,12 @@ bot.on('message', message  =>{
 
     switch(args[0]){
 
-        case "encuesta":
+        case "poll":
             const Embed = new RichEmbed()
             .setColor(0xFFC300)
-            .setTitle("¡Como iniciar una encuesta!")
-            .setDescription("!encuesta para mandar una encuesta simple de sí o no.")
-            .addField("Ejemplo", "!encuesta **¿Shii#0730 es el mejor?**")
+            .setTitle("¡How to start a survey!")
+            .setDescription("!poll to send a simple yes or no poll.")
+            .addField("Example", "!poll **¿nul-dev is the best?**")
             if(!args[1]){
                 message.channel.send(Embed);
                 break;
