@@ -1,3 +1,5 @@
+//WARNING, THERE ARE POSSIBILITIES OF TAKING A PERMANENT BAN OF THE BOT AND THE ACCOUNT//
+//WARNING, THERE ARE POSSIBILITIES OF TAKING A PERMANENT BAN OF THE BOT AND THE ACCOUNT//
 const {Client, RichEmbed} = require('discord.js');
 const Discord = require('discord.js')
 const bot = new Client();
