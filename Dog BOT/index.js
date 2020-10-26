@@ -1,4 +1,14 @@
-    if (message.content === '!dog'){ 
+const {Client, RichEmbed} = require('discord.js');
+const Discord = require('discord.js')
+const bot = new Client();
+const superagent = require('superagent')
+
+const token = 'YOUR TOKEN HERE';
+
+const PREFIX = '!';
+
+bot.on("message", async (message,args) => {  
+if (message.content === '!dog'){ 
 
         let msg = await message.channel.send("Generating...")
     
@@ -17,3 +27,4 @@
     
             msg.delete();
     }
+});
