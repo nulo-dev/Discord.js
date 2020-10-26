@@ -8,12 +8,12 @@ const PREFIX = '!';
 
 
 bot.on('ready', () => {
-    console.log('This bot is active!');
+    console.log('nul-dev bot is active!');
 
     bot.user.setPresence( {
         status: "online",
         game: {
-            name: "Sugerencias",
+            name: "nul-dev Suggestions",
             type: "PLAYING"
         }
     } );
@@ -25,12 +25,12 @@ bot.on('message', message => {
 
     switch(args[0]){
 
-        case "sugerencia":
+        case "suggestion":
             const Embed = new RichEmbed()
             .setColor(0xFFC300)
-            .setTitle("¡Como iniciar una sugerencia!")
-            .setDescription("!sugerencia para mandar una sugerencia.")
-            .addField("Ejemplo", "!sugerencia **¡Agregar este coche!**")
+            .setTitle("¡How to start a suggestion!")
+            .setDescription("!suggestion to send a suggestion.")
+            .addField("Example", "!suggestion **¡Add this car!**")
             if(!args[1]){
                 message.channel.send(Embed);
                 break;
@@ -42,8 +42,8 @@ bot.on('message', message => {
             .setColor(0xFFC300)
             .setAuthor(`${message.author.username}`, message.author.avatarURL)
             .setDescription(msgArgs)
-            .setThumbnail("https://i.imgur.com/r8XLl7Q.png")
-            .setFooter("© Shii#0730", "https://i.imgur.com/rkyOREy.gif")
+            .setThumbnail("https://i.imgur.com/bGhOUNs.jpg")
+            .setFooter("© Shii#0730", "https://i.imgur.com/bGhOUNs.jpg")
             message.channel.send(Embed2).then(messageReaction => {
                 messageReaction.react(":checkreact:659765899598888960").then ( () => messageReaction.react(":no:659765899582111764"));
                 message.delete(2000).catch(console.error);
