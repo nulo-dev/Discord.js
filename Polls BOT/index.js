@@ -19,7 +19,7 @@ bot.on('message', message  =>{
             .setColor(0xFFC300)
             .setTitle("¡Como iniciar una encuesta!")
             .setDescription("!encuesta para mandar una encuesta simple de sí o no.")
-            .addField("Ejemplo", "!encuesta **¿Osaka RP es el mejor servidor?**")
+            .addField("Ejemplo", "!encuesta **¿Shii#0730 es el mejor?**")
             if(!args[1]){
                 message.channel.send(Embed);
                 break;
