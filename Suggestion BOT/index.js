@@ -43,7 +43,7 @@ bot.on('message', message => {
             .setAuthor(`${message.author.username}`, message.author.avatarURL)
             .setDescription(msgArgs)
             .setThumbnail("https://i.imgur.com/r8XLl7Q.png")
-            .setFooter("© Osaka RP", "https://i.imgur.com/rkyOREy.gif")
+            .setFooter("© Shii#0730", "https://i.imgur.com/rkyOREy.gif")
             message.channel.send(Embed2).then(messageReaction => {
                 messageReaction.react(":checkreact:659765899598888960").then ( () => messageReaction.react(":no:659765899582111764"));
                 message.delete(2000).catch(console.error);
