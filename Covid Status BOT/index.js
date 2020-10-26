@@ -9,7 +9,7 @@ const token = 'YOUR TOKEN HERE';
 const PREFIX = '!';
    bot.on("message", async (message,args) => {
    if (message.content === "!covid") {
-        let res = await require('node-fetch')(`https://corona.lmao.ninja/v2/all?yesterday=false`);
+        let res = await require('node-fetch')(`https://corona.lmao.ninja/v2/all?`);
         let data = await res.json();
         let covid = new RichEmbed()
         .setTitle('Covid-19 information today') 
