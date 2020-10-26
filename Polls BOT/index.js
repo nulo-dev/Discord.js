@@ -28,8 +28,8 @@ bot.on('message', message  =>{
             let msgArgs = args.slice(1).join(" ");
 
             message.channel.send("📋 " + "**" + msgArgs + "**").then(messageReaction => {
-                    messageReaction.react("1⃣");
-                    messageReaction.react("2⃣");
+                    messageReaction.react("👍");
+                    messageReaction.react("👎");
                 message.delete(2000).catch(console.error);
             });
         break;
