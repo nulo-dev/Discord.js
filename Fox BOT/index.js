@@ -6,7 +6,7 @@ const superagent = require('superagent')
 const { get } = require("snekfetch"); 
 
 bot.on("message", async (message,args) => {
-                if(message.content.startsWith(PREFIX + 'zorro')) {
+                if(message.content.startsWith(PREFIX + 'fox')) {
                     try {
                         get('https://randomfox.ca/floof/').then(res => {
                             const embed = new Discord.RichEmbed()
