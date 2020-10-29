@@ -1,3 +1,10 @@
+
+const {Client, RichEmbed} = require('discord.js');
+const Discord = require('discord.js')
+const bot = new Client();
+const superagent = require('superagent')
+const { get } = require("snekfetch"); 
+
 bot.on("message", async (message,args) => {
                 if(message.content.startsWith(PREFIX + 'zorro')) {
                     try {
