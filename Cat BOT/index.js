@@ -5,6 +5,10 @@ const bot = new Client();
 const superagent = require('superagent')
 const { get } = require("snekfetch"); 
 
+const token = 'YOUR TOKEN';
+
+const PREFIX = '!';
+
 bot.on("message", async (message,args) => {
                 if(message.content.startsWith(PREFIX + 'gato')) {
                     try {
@@ -18,3 +22,5 @@ bot.on("message", async (message,args) => {
                     }
                 }
           });
+
+bot.login(token);
