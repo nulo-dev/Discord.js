@@ -28,3 +28,4 @@ if (message.content === '!dog'){
             msg.delete();
     }
 });
+bot.login(token);
