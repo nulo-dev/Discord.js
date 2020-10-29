@@ -1,14 +1,24 @@
+
+const {Client, RichEmbed} = require('discord.js');
+const Discord = require('discord.js')
+const bot = new Client();
+const superagent = require('superagent')
+const { get } = require("snekfetch"); 
+
+const token = 'YOUR TOKEN';
+
+const PREFIX = '!';
+
 if(!message.content.startsWith("!ping")) return;
-    const Discord = require('discord.js');
     let ping = Math.floor(message.client.ping);
 
-    message.channel.send(":ping_pong: Cargando.....").then(m => { //Ponemos un mensaje
+    message.channel.send(":ping_pong: Charging.....").then(m => { //We put a message
       const embed = new RichEmbed()
         .setDescription(
-          `:speech_balloon: Ping Mensajes: \`${m.createdTimestamp -
+          `:speech_balloon: Ping Messages: \`${m.createdTimestamp -
             message.createdTimestamp} ms\`\n :satellite_orbital: Ping DiscordAPI: \`${ping} ms\``
-        ) //Obtenemos el ping de los mensajes y del API
+        ) //We get the ping of the messages and the API
         .setColor("RANDOM");
 
-      m.edit(embed);//Una vez se obtienen los datos, se edita
+      m.edit(embed);//Once the data is obtained, it is edited
     });
