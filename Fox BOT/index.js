@@ -19,7 +19,6 @@ bot.on("message", async (message,args) => {
                         });
                     } catch(err) {
                         console.log(err.stack)
-                       // return message.channel.send(err.stack);
                     }
                 }
 });
