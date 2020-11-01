@@ -1,3 +1,9 @@
+const {Client, RichEmbed} = require('discord.js');
+const Discord = require('discord.js')
+const bot = new Client();
+const superagent = require('superagent')
+const { get } = require("snekfetch"); 
+
 const token = 'YOUR TOKEN';
 
 const PREFIX = '!';
